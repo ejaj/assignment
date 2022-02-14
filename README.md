@@ -7,7 +7,7 @@ API for CRUD operation
 The first thing to do is to clone the repository:
 
 ```sh
-$ git clone https://kazi_ejaj@bitbucket.org/gpix/giga.git
+$ git clone https://github.com/ejaj/assignment.git
 $ cd assigment
 ```
 
@@ -15,7 +15,7 @@ Enable a virtual environment to install dependencies in and activate it:
 
 ```sh
 $
-$ source env/bin/activate
+$ source venv/bin/activate
 ```
 
 Then install the dependencies:
@@ -29,11 +29,14 @@ For mac users
 ```
 Once `pip` has finished downloading the dependencies:
 ```sh
-(env)$ cd project
+(env)$ cd assigment
 (env)$ python manage.py runserver
 ```
-And navigate to `http://127.0.0.1:8000/`.
-To get initial data browse `http://127.0.0.1:8000/initial_news_api`
+
+For creating Super user, you can run this command.
+```sh
+(env)$ python manage.py superuser
+```
 
 ## Dependencies
 
@@ -42,5 +45,5 @@ To get initial data browse `http://127.0.0.1:8000/initial_news_api`
 ```
 Change the database name and password from .env file
 
-API end point:
+API end point and response:
 See the API documentation 
