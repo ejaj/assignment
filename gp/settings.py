@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'user',
-    'polls',
     'apis',
     'currency'
 ]
