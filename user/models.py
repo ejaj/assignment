@@ -5,8 +5,13 @@ from django.contrib.auth.base_user import AbstractBaseUser
 
 from . import managers
 
+from . import singleton
+
 
 class User(AbstractBaseUser, PermissionsMixin):
+    """
+    Stores a single user entry.
+    """
     email = models.EmailField(_('Email Address'), unique=True)
     name = models.CharField(_('Name'), max_length=30, null=True, blank=True)
     is_staff = models.BooleanField(default=False)
@@ -20,3 +25,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+
+class SiteSetting(singleton.SingletonBaseModel):
+    site_name = models.CharField(max_length=100)
